@@ -1,9 +1,8 @@
-// src/incoming_inventory/incoming_inventory.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { IncomingInventory } from 'src/entities/incoming_inventory.entity';
 import { ForecastService } from 'src/forecast/forecast.service';
-import { Repository } from 'typeorm'; // Replace with your entity
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class IncomingInventoryService {

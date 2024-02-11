@@ -1,6 +1,4 @@
 import React from "react";
-
-// Define the structure of a single inventory item
 interface InventoryItem {
   id: number;
   productName: string;

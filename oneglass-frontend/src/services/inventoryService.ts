@@ -6,10 +6,8 @@ export interface InventoryData {
   productName?: string;
 }
 
-// Base URL for the inventory API endpoint
 const BASE_URL = "http://localhost:3000/incoming-inventory";
 
-// Function to fetch all inventory data
 const fetchInventory = async (): Promise<InventoryData[]> => {
   const response = await fetch(BASE_URL);
   if (!response.ok) {
@@ -18,7 +16,6 @@ const fetchInventory = async (): Promise<InventoryData[]> => {
   return response.json();
 };
 
-// Function to fetch required stock for a specific location
 const fetchRequiredStock = async (location: string): Promise<number> => {
   const response = await fetch(`${BASE_URL}/requiredStock/${location}`);
   if (!response.ok) {
@@ -27,7 +24,6 @@ const fetchRequiredStock = async (location: string): Promise<number> => {
   return response.json();
 };
 
-// Function to create new inventory data
 const createInventory = async (data: InventoryData): Promise<InventoryData> => {
   const response = await fetch(BASE_URL, {
     method: "POST",
@@ -40,7 +36,6 @@ const createInventory = async (data: InventoryData): Promise<InventoryData> => {
   return response.json();
 };
 
-// Function to update existing inventory data
 const updateInventory = async (
   id: number,
   data: InventoryData
@@ -56,7 +51,6 @@ const updateInventory = async (
   return response.json();
 };
 
-// Function to delete inventory data
 const deleteInventory = async (id: number): Promise<void> => {
   const response = await fetch(`${BASE_URL}/${id}`, {
     method: "DELETE",

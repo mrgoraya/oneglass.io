@@ -1,4 +1,3 @@
-// src/forecast/forecast.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Forecast } from 'src/entities/forecast.entity';

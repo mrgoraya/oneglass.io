@@ -28,7 +28,6 @@ const InventoryOverview: React.FC = () => {
             <th>Current Stock</th>
             <th>Incoming Stock</th>
             <th>Product Name</th>
-            {/* Add other headers as needed */}
           </tr>
         </thead>
         <tbody>
@@ -38,7 +37,6 @@ const InventoryOverview: React.FC = () => {
               <td>{item.currentStock}</td>
               <td>{item.incomingStock}</td>
               <td>{item.productName}</td>
-              {/* Add other data cells as needed */}
             </tr>
           ))}
         </tbody>
